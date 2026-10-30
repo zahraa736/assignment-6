@@ -1,0 +1,88 @@
+=== GET ALL TASKS ===
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+ETag: W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"
+Date: Fri, 30 Oct 2026 09:33:18 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+[]
+=== CREATE TASK ===
+HTTP/1.1 201 Created
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 73
+ETag: W/"49-BOaHYlj6VaHOAqlhzRcSQR8f/2w"
+Date: Fri, 30 Oct 2026 09:33:18 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":2,"title":"Test HW6","description":"API testing","completed":false}
+=== GET TASK BY ID ===
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 75
+ETag: W/"4b-m7GHYVt9hChKscfxnP/L4xRZ32Q"
+Date: Fri, 30 Oct 2026 09:33:18 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+[{"id":2,"title":"Test HW6","description":"API testing","completed":false}]
+=== INVALID TASK ===
+HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 26
+ETag: W/"1a-D4dsL3U5Autp3bKNpxD/le70vNM"
+Date: Fri, 30 Oct 2026 09:33:18 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"error":"Task not found"}
+=== INVALID INPUT ===
+HTTP/1.1 400 Bad Request
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 60
+ETag: W/"3c-4QQZQM57jpKQPa2O1KcVwmsgIZE"
+Date: Fri, 30 Oct 2026 09:33:18 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"error":"Title is required and must be a non-empty string"}
+===== GET TASK BY ID =====
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 73
+ETag: W/"49-BOaHYlj6VaHOAqlhzRcSQR8f/2w"
+Date: Fri, 30 Oct 2026 09:34:14 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":2,"title":"Test HW6","description":"API testing","completed":false}
+===== PUT UPDATE TASK =====
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 83
+ETag: W/"53-D1K4ta4mUdaBY5u7A20LAj1M6Xc"
+Date: Fri, 30 Oct 2026 09:34:18 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":2,"title":"Test HW6 Updated","description":"Testing update","completed":true}
+===== DELETE TASK =====
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 39
+ETag: W/"27-urf4l4W7aUjEqcMghGgrIBDtf0M"
+Date: Fri, 30 Oct 2026 09:34:24 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"Task deleted successfully"}
